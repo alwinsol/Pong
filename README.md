@@ -7,4 +7,10 @@ Which essentially is the 70s classic arcade game Pong or Tennis.
 This is done using HTML5 Canvas and JavaScript.
 So essentially all that is needed is a web browser.
 
-Part 1 - HTML Basics and content, 
+Part 1 - HTML Basics and content,
+
+Part 2 - Drawing and positions
+          Adding canvas element and onload function()
+          declare variables canvas and canvasContext
+          handle the variables
+          draw order, positioning graphical elements
