@@ -14,3 +14,8 @@ Part 2 - Drawing and positions
           declare variables canvas and canvasContext
           handle the variables
           draw order, positioning graphical elements
+
+Part 3 - Movement and Time
+          draw all code in one function
+          call the function when you want
+          move on draw
