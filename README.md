@@ -19,3 +19,11 @@ Part 3 - Movement and Time
           draw all code in one function
           call the function when you want
           move on draw
+
+Part 4 - Clean up the code
+          Update frequency as frames per second
+          Draw the paddle
+          Separate move code and draw code
+          writing a function using the inline form
+
+Part 5 - 
