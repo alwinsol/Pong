@@ -26,4 +26,11 @@ Part 4 - Clean up the code
           Separate move code and draw code
           writing a function using the inline form
 
-Part 5 - 
+Part 5 - variables for speed changes
+          increase ball speed
+          Move the ball back in the opposite direction.
+          Bounce the ball of the canvas.
+          keep speed of ball the same after the Bounce
+          Hard coding removed, used canvas dimensions
+          Bounce of the other side of the canvas.
+          Functions for drawing filled shapes.
