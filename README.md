@@ -45,4 +45,12 @@ Part 7 - Move and Bounce the Ball Vertically
          Paddle position values when mouse moves
          Use the paddles position var in the paddles Draw Code.
          Align the paddle's centre on the mouse's Y position.
-         
+
+Part 8 - Reset the ball
+        When it reaches the left side
+        Ball direction change on scoring
+        bounce ball from left paddle
+        Right side paddle
+        Label for thickness
+        Mouse for testing
+        Reset ball if it goes past the right edge
