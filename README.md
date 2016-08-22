@@ -34,3 +34,8 @@ Part 5 - variables for speed changes
           Hard coding removed, used canvas dimensions
           Bounce of the other side of the canvas.
           Functions for drawing filled shapes.
+
+Part 6 - make into a ball
+          Circles, center, radius and colorRect
+          Create a function to draw any filled Circles
+          
