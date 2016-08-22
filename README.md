@@ -38,4 +38,11 @@ Part 5 - variables for speed changes
 Part 6 - make into a ball
           Circles, center, radius and colorRect
           Create a function to draw any filled Circles
-          
+
+Part 7 - Move and Bounce the Ball Vertically
+         Paddle movement and size.
+         Mouse position relative to the canvas
+         Paddle position values when mouse moves
+         Use the paddles position var in the paddles Draw Code.
+         Align the paddle's centre on the mouse's Y position.
+         

@@ -1,57 +1,85 @@
 <html>
-<b>Anyone for Tennis?</b>
+
 <canvas id="gameCanvas" width="800" height="600"></canvas>
+
 <script>
   var canvas;
   var canvasContext;
-  var ballX = 50; // right and left
-  var ballY // up and down
+  var ballX = 50;
+  var ballY = 50;
   var ballSpeedX = 10;
+  var ballSpeedY = 4;
 
-  window.onload = function(){
-    //console.log("Hello Dave!");
-    canvas = document.getElementById('gameCanvas');
-    canvasContext = canvas.getContext('2d');
-    var framesPerSecond = 30;
-    setInterval(function(){
-      moveEverything();
-      drawEverything();
-    }, 1000/framesPerSecond); //number will be forgotten after the onload has finished running
+  var paddle1Y = 250;
+  const PADDLE_HEIGHT = 100;
+
+  function calculateMousePos(evt) {
+  	var rect = canvas.getBoundingClientRect();
+  	var root = document.documentElement;
+  	var mouseX = evt.clientX - rect.left - root.scrollLeft;
+  	var mouseY = evt.clientY - rect.top - root.scrollTop;
+  	return {
+  		x:mouseX,
+  		y:mouseY
+  	};
   }
 
-  function moveEverything(){
+  window.onload = function() {
+  	canvas = document.getElementById('gameCanvas');
+  	canvasContext = canvas.getContext('2d');
+
+  	var framesPerSecond = 30;
+  	setInterval(function() {
+  			moveEverything();
+  			drawEverything();
+  		}, 1000/framesPerSecond);
+
+  	canvas.addEventListener('mousemove',
+  		function(evt) {
+  			var mousePos = calculateMousePos(evt);
+  			paddle1Y = mousePos.y - (PADDLE_HEIGHT/2);
+  		});
+  }
+
+  function moveEverything() {
     ballX = ballX + ballSpeedX;
-    //ballSpeedX = ballSpeedX + 1;
-    if (ballX < 0){
+    ballY = ballY + ballSpeedY;
+
+    if(ballX < 0) {
       ballSpeedX = -ballSpeedX;
     }
-
-    if (ballX > canvas.width){
+    if(ballX > canvas.width) {
       ballSpeedX = -ballSpeedX;
+    }
+    if(ballY < 0) {
+      ballSpeedY = -ballSpeedY;
+    }
+    if(ballY > canvas.height) {
+      ballSpeedY = -ballSpeedY;
     }
   }
 
-  function drawEverything(){
-    //black out the screen
-    colorRect(0, 0, canvas.width, canvas.height, 'black');
+  function drawEverything() {
+    // next line blanks out the screen with black
+    colorRect(0,0,canvas.width,canvas.height,'black');
 
-    //make lhs paddle
-    colorRect(0, 210, 10, 100, 'white');
+    // this is left player paddle
+    colorRect(0,paddle1Y,10,PADDLE_HEIGHT,'white');
 
-    //draw the ball
-    colorCircle(ballX, 150, 10, 'red');
+    // next line draws the ball
+    colorCircle(ballX, ballY, 10, 'red');
   }
 
-  function colorCircle(centerX, centerY, radius, drawColor){
+  function colorCircle(centerX, centerY, radius, drawColor) {
     canvasContext.fillStyle = drawColor;
     canvasContext.beginPath();
-    canvasContext.arc(centerX, centerY, radius, 0, Math.PI*2, true);
+    canvasContext.arc(centerX, centerY, radius, 0,Math.PI*2,true);
     canvasContext.fill();
   }
 
-  function colorRect(leftX, topY, width, height, drawColor){
+  function colorRect(leftX,topY, width,height, drawColor) {
     canvasContext.fillStyle = drawColor;
-    canvasContext.fillRect(leftX, topY, width, height);
+    canvasContext.fillRect(leftX,topY, width,height);
   }
 
 </script>
