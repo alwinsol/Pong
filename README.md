@@ -62,4 +62,10 @@ Part 9 - AI and scoring
           Right paddle shake
           Text on display
           Setup, update and score values
-          
+
+Part 10 - Ball control and winning
+          Striking the paddle position
+          Ball control on where it hits the paddle
+          Reset score when player wins
+          turn off test scoring
+          Stop game when a player reaches the winning score
