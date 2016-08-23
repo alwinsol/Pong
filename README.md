@@ -54,3 +54,12 @@ Part 8 - Reset the ball
         Label for thickness
         Mouse for testing
         Reset ball if it goes past the right edge
+
+Part 9 - AI and scoring
+          Right paddle Movement
+          Use A += B rather than A = A+B
+          Line up the paddle
+          Right paddle shake
+          Text on display
+          Setup, update and score values
+          
