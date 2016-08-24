@@ -69,3 +69,8 @@ Part 10 - Ball control and winning
           Reset score when player wins
           turn off test scoring
           Stop game when a player reaches the winning score
+
+Part 11 - Net and Mouse Click
+          Restart game
+          Declare the winner
+          Adding the net
